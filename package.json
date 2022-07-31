@@ -1,0 +1,45 @@
+{
+  "name": "@timly/yun",
+  "version": "1.0.0",
+  "description": "Get to know Node CLI `npx @timly/yun`.",
+  "main": "index.js",
+  "bin": {
+    "yun": "index.js"
+  },
+  "scripts": {
+    "format": "prettier --write \"./**/*.{js,json}\""
+  },
+  "keywords": [
+    "timly",
+    "@timly/yun",
+    "yun"
+  ],
+  "files": [
+    "LICENSE",
+    ".prettierrc",
+    "README.md",
+    "index.js"
+  ],
+  "repository": "lyios8859-1/create-node-cli-template",
+  "author": {
+    "name": "Timly",
+    "email": "liu67839@gmail.com",
+    "url": "https://liuyunyun.xyz"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "await-to-js": "^3.0.0",
+    "axios": "^0.25.0",
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "cli-table3": "^0.6.1",
+    "enquirer": "^2.3.6",
+    "execa": "^5.1.1",
+    "log-symbols": "^4.1.0",
+    "meow": "^7.1.1",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
