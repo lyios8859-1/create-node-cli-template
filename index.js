@@ -6,16 +6,26 @@
  * setp3: 执行 package.json 中的 bin 字段中的命令, 这里设置 bin: {"yun": "index.js"}, 就可以执行 `yun` 命令
  */
 
+// 查看包的大小: https://packagephobia.com/
+/**
+ * 使用了 @timly/yun 的包命名方式,npm 发布包的时候报错:
+ * ERR! 402 Payment Required - PUT https://registry.npmjs.org/@timly%2fyun - You must sign up for private packages
+ *
+ * 需要 `--access public` 的选项
+ *
+ * npm publish --access public
+ */
+
 const chalk = require("chalk");
 
-const init = require("./utils/init");
-const cli = require("./utils/cli");
-const debug = require("./utils/debug");
-const alert = require("./utils/cli-alerts");
+const init = require("./tools/init");
+const cli = require("./tools/cli");
+const debug = require("./tools/debug");
+const alert = require("./tools/cli-alerts");
 
-const stats = require("./utils/stats");
-const posts = require("./utils/posts");
-const { bio, ad, social, blog, blogName } = require("./utils/data");
+const stats = require("./tools/stats");
+const posts = require("./tools/posts");
+const { bio, ad, social, blog, blogName } = require("./tools/data");
 
 const log = console.log;
 const { flags, input } = cli;
@@ -41,13 +51,3 @@ const { flags, input } = cli;
 
   log("Node CLI - Test\n");
 })();
-
-// 查看包的大小: https://packagephobia.com/
-/*
-使用了 @timly/yun 的包命名方式,npm 发布包的时候报错:
-ERR! 402 Payment Required - PUT https://registry.npmjs.org/@timly%2fyun - You must sign up for private packages
-
-需要 `--access public` 的选项
-
-npm publish --access public
-*/

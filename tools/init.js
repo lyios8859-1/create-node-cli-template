@@ -4,7 +4,7 @@ const welcome = require("./cli-welcome");
 const checkNode = require("./cli-check-node-version");
 const unhandled = require("./cli-handle-unhandled");
 
-const pkgJson = require("./../package.json");
+const pkgJson = require("../package.json");
 
 module.exports = (minimal, clear) => {
   // 检测有报错,退出进程
@@ -35,5 +35,5 @@ module.exports = (minimal, clear) => {
     );
 
   // 检测 nodejs 版本
-  checkNode("12", {fail: true});
+  checkNode("12", { fail: true });
 };
