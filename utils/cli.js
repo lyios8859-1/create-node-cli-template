@@ -81,6 +81,8 @@ const helpText = meowHelper({
   commands,
   defaults: true, // 显示默认值
   desc: "CLI Options Docs",
+  header: "This is Header...",
+  footer: "This is Footer...",
 });
 
 const options = {
