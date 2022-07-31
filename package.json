@@ -4,7 +4,7 @@
   "description": "Get to know Node CLI `npx @timly/yun`.",
   "main": "index.js",
   "bin": {
-    "yun": "index.js"
+    "@timly/yun": "index.js"
   },
   "scripts": {
     "format": "prettier --write \"./**/*.{js,json}\""
