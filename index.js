@@ -8,7 +8,7 @@
 
 // 查看包的大小: https://packagephobia.com/
 /**
- * 使用了 @timly/yun 的包命名方式,npm 发布包的时候报错:
+ * 如果使用了 @timly/yun 的包命名方式,npm 发布包的时候报错:
  * ERR! 402 Payment Required - PUT https://registry.npmjs.org/@timly%2fyun - You must sign up for private packages
  *
  * 需要 `--access public` 的选项
@@ -18,15 +18,15 @@
 
 const chalk = require("chalk");
 
-const init = require("./cli-tools/init");
-const cli = require("./cli-tools/cli");
-const debug = require("./cli-tools/debug");
-const alert = require("./cli-tools/cli-alerts");
-const generate = require("./cli-tools/generate");
+const init = require("./utils/init");
+const cli = require("./utils/cli");
+const debug = require("./utils/debug");
+const alert = require("./utils/cli-alerts");
+const generate = require("./utils/generate");
 
-const stats = require("./cli-tools/stats");
-const posts = require("./cli-tools/posts");
-const { bio, ad, social, blog, blogName } = require("./cli-tools/data");
+const stats = require("./utils/stats");
+const posts = require("./utils/posts");
+const { bio, ad, social, blog, blogName } = require("./utils/data");
 
 const log = console.log;
 const { flags, input } = cli;

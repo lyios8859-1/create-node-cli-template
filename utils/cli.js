@@ -76,7 +76,7 @@ const commands = {
 };
 
 const helpText = meowHelper({
-  name: "npx @timly/yun",
+  name: "npx yun-cli",
   flags,
   commands,
   defaults: true, // 显示默认值

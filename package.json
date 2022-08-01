@@ -1,17 +1,17 @@
 {
-  "name": "@timly/yun",
+  "name": "yun-cli",
   "version": "1.4.0",
-  "description": "Get to know Node CLI `npx @timly/yun`.",
+  "description": "Get to know Node CLI `npx yun-cli`.",
   "main": "index.js",
   "bin": {
-    "@timly/yun": "index.js"
+    "yun-cli": "index.js"
   },
   "scripts": {
     "format": "prettier --write \"./**/*.{js,json}\""
   },
   "keywords": [
     "timly",
-    "@timly/yun",
+    "yun-cli",
     "yun"
   ],
   "files": [
