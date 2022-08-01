@@ -11,8 +11,8 @@ const spinner = ora({ text: "" });
 
 module.exports = async () => {
   const vars = await questions();
-  // const inDir = path.join(__dirname, "../template");
-  const inDir = path.join(process.cwd(), "template");
+  // const inDir = path.join(process.cwd(), "template"); // process.cwd() 这里注意虽然本地可以,但是发布包 到 npm 后还是有问题
+  const inDir = path.join(__dirname, "../template"); // 选择 __dirname
   const outDir = path.join(process.cwd(), vars.name);
 
   copy(inDir, outDir, vars, async (err, createdFiles) => {
