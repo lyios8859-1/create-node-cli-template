@@ -18,14 +18,15 @@
 
 const chalk = require("chalk");
 
-const init = require("./tools/init");
-const cli = require("./tools/cli");
-const debug = require("./tools/debug");
-const alert = require("./tools/cli-alerts");
+const init = require("./utils/init");
+const cli = require("./utils/cli");
+const debug = require("./utils/debug");
+const alert = require("./utils/cli-alerts");
+const generate = require("./utils/generate");
 
-const stats = require("./tools/stats");
-const posts = require("./tools/posts");
-const { bio, ad, social, blog, blogName } = require("./tools/data");
+const stats = require("./utils/stats");
+const posts = require("./utils/posts");
+const { bio, ad, social, blog, blogName } = require("./utils/data");
 
 const log = console.log;
 const { flags, input } = cli;
@@ -47,7 +48,45 @@ const { flags, input } = cli;
   // 请求 github, 获取统计数据
   flags.stats && (await stats());
 
+  // 生成模板
+  await generate();
+
   debug({ flags, input }, flags.debug);
 
   log("Node CLI - Test\n");
 })();
+
+/**
+ * 
+ #! /bin/bash
+
+if [ $# -ne 1 ] ; then
+
+echo "Usage: setbrightness <0.0-0.1>"
+
+exit 1
+
+fi
+
+xrandr --output LVDS --brightness $1
+
+
+
+
+输入xrandr，查看输出中状态是connected的显示设备，如LVDS。具体命令可以是：
+
+xrandr | grep -v disconnected | grep connected
+
+调整亮度：
+
+xrand --output LVDS --brightness 0.5
+
+
+所有用户加入执行权限：
+
+chmod a+x setbrightness
+
+移至应用程序目录下，以便可以直接使用：
+
+mv setbrightness /usr/local/bin
+ */
