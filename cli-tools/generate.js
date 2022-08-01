@@ -32,11 +32,14 @@ module.exports = async () => {
     // 切换到目录中在去执行下面的 npm 命令
     process.chdir(outDir);
 
-    // 生成的项目需要的安装包配置
-    const pkgs = ["chalk@4", "log-symbols@4", "cli-table3@0", "meow@7"];
-    // 执行安装命令
-    await execa("npm", ["install", ...pkgs]);
-    await execa("npm", ["install", "prettier@2", "-D"]);
+    // 暂时不安装
+    if (false) {
+      // 生成的项目需要的安装包配置
+      const pkgs = ["chalk@4", "log-symbols@4", "cli-table3@0", "meow@7"];
+      // 执行安装命令
+      await execa("npm", ["install", ...pkgs]);
+      await execa("npm", ["install", "prettier@2", "-D"]);
+    }
 
     // fix: package.json 中模板生成有重复选项的问题, npm dedupe 的文档中描述可以,但是现在处理不了,有 bug
     await execa("npm", ["dedupe"]);
@@ -47,7 +50,7 @@ module.exports = async () => {
       type: "success",
       name: "ALL DONE!",
       msg: `\n\n${createdFiles.length} files created in ${d(
-        `./${outDir}`
+        `${outDir}`
       )} directory.`,
     });
   });

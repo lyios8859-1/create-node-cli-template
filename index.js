@@ -18,15 +18,15 @@
 
 const chalk = require("chalk");
 
-const init = require("./utils/init");
-const cli = require("./utils/cli");
-const debug = require("./utils/debug");
-const alert = require("./utils/cli-alerts");
-const generate = require("./utils/generate");
+const init = require("./cli-tools/init");
+const cli = require("./cli-tools/cli");
+const debug = require("./cli-tools/debug");
+const alert = require("./cli-tools/cli-alerts");
+const generate = require("./cli-tools/generate");
 
-const stats = require("./utils/stats");
-const posts = require("./utils/posts");
-const { bio, ad, social, blog, blogName } = require("./utils/data");
+const stats = require("./cli-tools/stats");
+const posts = require("./cli-tools/posts");
+const { bio, ad, social, blog, blogName } = require("./cli-tools/data");
 
 const log = console.log;
 const { flags, input } = cli;
