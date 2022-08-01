@@ -1,18 +1,21 @@
 {
-  "name": "yun-cli",
-  "version": "1.4.0",
-  "description": "Get to know Node CLI `npx yun-cli`.",
+  "name": "yun-node-cli",
+  "version": "1.0.0",
+  "description": "Get to know Node CLI `npx yun-node-cli`.",
   "main": "index.js",
   "bin": {
-    "yun-cli": "index.js"
+    "yun-node-cli": "index.js"
   },
   "scripts": {
     "format": "prettier --write \"./**/*.{js,json}\""
   },
   "keywords": [
     "timly",
-    "yun-cli",
-    "yun"
+    "yun-node-cli",
+    "yun",
+    "node-cli",
+    "CLI",
+    "node"
   ],
   "files": [
     "LICENSE",

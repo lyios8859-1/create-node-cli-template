@@ -76,7 +76,7 @@ const commands = {
 };
 
 const helpText = meowHelper({
-  name: "npx yun-cli",
+  name: "npx yun-node-cli",
   flags,
   commands,
   defaults: true, // 显示默认值
